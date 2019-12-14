@@ -1,0 +1,58 @@
+/**
+
+Midterm - styles.css
+Author: Amber Sakkinen <alsakkinen@hawkmail.hfcc.edu>
+Link: --
+Description: This is the styling page for the animal midterm.
+Created: 10.14.19
+Last Edited: 10.14.19
+
+ **/
+header{
+    padding: 60px;
+    text-align: center;
+    background: darkseagreen;
+    color: floralwhite;
+    font-size: 30px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkseagreen;
+    color: floralwhite;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}

@@ -1,0 +1,51 @@
+/**
+* quiz8.txt
+*
+* Cookies and sessions
+*
+* @category    Chapter 12
+* @package     Quiz 8
+* @author      Amber Sakkinen <alsakkinen@hawkmail.hfcc.edu>
+* @version     2019.11.14
+* @grade
+*/
+
+// 1. (4pts) Using a PHP function, save a cookie named season.
+//              The cookie should contain the value saved in the $cv variable.
+//              The cookie should expire after 90 days.
+$cv = "CryptoWinter";
+
+    function saveCookie($cv) { setcookie("Season", $cv, time()+(86400 * 90)); }
+
+
+// 2. (3pt) Imagine you have a user_id in a variable called $uid.
+//          Write all the code needed below to store their user_id in a session variable.
+//          Name this session index current_user_id.
+$uid = 42;
+
+    session_start();
+    if(isset( $_POST[$uid])) { $_SESSION[current_user_id] =  $_POST[$uid]; }
+    
+    if(isset($_SESSION[current_user_id])) { $uid = $_SESSION[current_user_id]; }
+    else { $_SESSION[current_user_id] = 0; }
+
+
+// 3. (3pts) Now write the following echo statements,
+//                          where X and Y are the users season cookie and user_id.
+//              Your current season is X.
+//              Your user ID is Y.
+
+    saveCookie('X');
+    echo 'Your current season is ' + $_COOKIE['Season'];
+    
+    $_SESSION['current_user_id'] = 'Y';
+    echo 'Your user ID is ' + $_SESSION['current_user_id'];
+
+
+// B. (1pt) Explain how you might use the HTTP_USER_AGENT data in the $_SERVER array...
+//                                                ...to improve the security of your site.
+
+    The HTTP_USER_AGENT identifies different user features and can be used for security purposes by identifying things
+    like what kind of browser the user is using to reduce the possibilty of a hacker pretending to be the user. In the $_SERVER
+    array it will return as a haystack and if there is a needle in the haystack then it will return false and not execute, 
+    protecting the user's account or the system from malicious threats.

@@ -1,0 +1,38 @@
+<?php
+/**
+ * q9.txt
+ *
+ * Security
+ *
+ * @category    Chapter 13
+ * @package     Quiz
+ * @author      Amber Sakkinen <alsakkinen@hawkmail.hfcc.edu>
+ * @version     2019.11.21
+ * @grade       12 / 10
+*/
+
+// 1. (5pts) Create a function or class that can accept at least one string parameter.
+//             Assume the parameter is a password, hash and return it.
+
+    function acceptPassword($pass) { return SHA1($pass); }
+    
+
+// 2. (3pts) Let's say you have a password saved in the $pass variable.
+//              But do not assume this is true!
+//              Execute some checks to ensure the variable is not null and is indeed a string.
+$pass = '';
+
+    if(isset($pass) && is_string($pass)) { echo 'Password is not null and is a string!'; }
+
+
+// 3. (2pts) Use the function you created above to hash the $pass variable.
+//              Then save the hashed password in an $encp variable.
+
+    $encp = acceptPassword($pass);
+
+
+// B. (2pt) Describe a honey pot.
+
+  //  A honey pot is a way of verifying that it is in fact a user and not a bot using your site.
+  //  An example of a honey pot is creating a blank field on a form that users would know not to
+  //  fill out, trapping the bot when it fills it out.
