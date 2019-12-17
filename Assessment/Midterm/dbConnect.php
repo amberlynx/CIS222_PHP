@@ -10,7 +10,7 @@ Last Edited: 10.15.19
 
  **/
 define('USER', 'alsakkinen');
-define('PASS', 'brzchj2u');
+define('PASS', '--');
 define('HOST', 'localhost');
 define('DB', 'alsakkinen');
 
