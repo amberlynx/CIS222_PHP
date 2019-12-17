@@ -10,7 +10,7 @@
  **/
 define('HOST', 'localhost');
 define('USER', 'alsakkinen');
-define('PASS', 'brzchj2u');
+define('PASS', '--');
 define('DB', 'alsakkinen');
 //$dbHost = `127.0.0.1`;
 //$charset = 'utf8';
